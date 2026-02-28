@@ -1,0 +1,133 @@
+.faq {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 80px var(--page-px);
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 36px);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    font-family: var(--font-arial);
+    font-weight: 400;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 40px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    font-family: var(--font-arial);
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .tab--active {
+    background: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+
+    &:hover {
+      background: var(--color-white);
+    }
+  }
+
+  .item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    list-style: none;
+    font-family: var(--font-arial);
+    font-size: 16px;
+    font-weight: 400;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      content: "";
+    }
+  }
+
+  .chevron {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 1.5px solid var(--color-white);
+      border-bottom: 1.5px solid var(--color-white);
+      transform: translate(-50%, -70%) rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  details[open] .chevron::before {
+    transform: translate(-50%, -30%) rotate(-135deg);
+  }
+
+  .answer {
+    padding: 0 0 20px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-arial);
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,61 @@
+.bestseller {
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: 0 var(--page-px) 80px;
+
+  .container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+  }
+
+  .video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(48px, 6vw, 96px);
+    color: var(--color-white);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .text {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .subtitle {
+    font-family: var(--font-arial);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #000000;
+  }
+
+  .desc {
+    font-family: var(--font-arial);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #000000;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}

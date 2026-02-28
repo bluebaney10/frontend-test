@@ -1,0 +1,61 @@
+.new-arrival {
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: 100px var(--page-px);
+
+  .container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-wrap {
+    position: relative;
+    width: 420px;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #1a1a1a;
+    display: block;
+  }
+
+  .badge {
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(80px, 10vw, 150px);
+    color: var(--color-white);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+
+  .subtitle {
+    font-family: var(--font-arial);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #000000;
+  }
+
+  .desc {
+    font-family: var(--font-arial);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #000000;
+    max-width: 520px;
+  }
+}

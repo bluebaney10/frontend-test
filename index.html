@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLAIMANAS</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="left">
+          <a href="#" class="lang">
+            TH - THB
+            <svg
+              class="lang-arrow"
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <ul class="links">
+          <li><a href="#" class="link">WOMEN</a></li>
+          <li><a href="#" class="link">COLLECTIONS</a></li>
+          <li class="dropdown">
+            <a href="#" class="link">EDITORIAL</a>
+          </li>
+          <li><a href="#" class="link">NEWS</a></li>
+          <li><a href="#" class="link">STORIES</a></li>
+        </ul>
+
+        <div class="dropdown-panel">
+          <div class="dropdown-content">
+            <h3 class="dropdown-title">EDITORIAL</h3>
+            <ul class="dropdown-list">
+              <li><a href="#">A.S.C</a></li>
+              <li><a href="#">BAZAAR</a></li>
+              <li><a href="#">ELLE</a></li>
+              <li><a href="#">GQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right">
+          <a href="#" class="signin">SIGN IN</a>
+          <a href="#" class="cart" aria-label="Shopping bag">
+            <svg
+              width="20"
+              height="22"
+              viewBox="0 0 20 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 5H19L18 21H2L1 5Z"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 5C6 2.79086 7.79086 1 10 1C12.2091 1 14 2.79086 14 5"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <video class="video" autoplay muted loop playsinline>
+        <source src="assets/videos/mockup_video576.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <h1 class="title">PLAIMANAS</h1>
+    </section>
+
+    <section class="new-arrival">
+      <div class="container">
+        <div class="image-wrap">
+          <img
+            class="image"
+            src="assets/images/new-arrival.jpg"
+            alt="New arrival product"
+          />
+          <span class="badge">NEW</span>
+        </div>
+        <h2 class="subtitle">Sed egestas, nibh a condimentum imperdiet</h2>
+        <p class="desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+          nisl non rhoncus commodo, turpis elit ultricies justo, vitae tincidunt
+          quam justo id lacus. Proin vitae.
+        </p>
+      </div>
+    </section>
+
+    <section class="bestseller">
+      <div class="container">
+        <div class="banner">
+          <video class="video" autoplay muted loop playsinline>
+            <source src="assets/videos/bestseller.mp4" type="video/mp4" />
+          </video>
+          <h2 class="title">BESTSELLER</h2>
+        </div>
+        <div class="text">
+          <h3 class="subtitle">Sed egestas, nibh a condimentum imperdiet</h3>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo, turpis elit ultricies justo, vitae
+            tincidunt quam justo id lacus. Proin vitae.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections">
+      <div class="container">
+        <div class="grid">
+          <a href="#" class="card card--wide">
+            <img
+              class="card-image"
+              src="assets/videos/collection-1.jpg"
+              alt="Collection 01"
+            />
+            <span class="card-title">COLLECTION 01</span>
+          </a>
+          <a href="#" class="card">
+            <img
+              class="card-image"
+              src="assets/videos/collection-2.jpg"
+              alt="Collection 02"
+            />
+            <span class="card-title">COLLECTION 02</span>
+          </a>
+          <a href="#" class="card">
+            <img
+              class="card-image"
+              src="assets/videos/collection-3.jpg"
+              alt="Collection 03"
+            />
+            <span class="card-title">COLLECTION 03</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="track">
+        <span class="content">
+          <span class="item">NEW ARRIVAL</span>
+          <span class="arrow">
+            <svg
+              width="57"
+              height="50"
+              viewBox="0 0 57 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M56.6667 21.25V28.3333H14.1667V35.4167H7.08333V28.3333H0V21.25H7.08333V14.1667H14.1667V21.25H56.6667ZM21.25 7.08333H14.1667V14.1667H21.25V7.08333ZM21.25 7.08333H28.3333V0H21.25V7.08333ZM21.25 42.5H14.1667V35.4167H21.25V42.5ZM21.25 42.5H28.3333V49.5833H21.25V42.5Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+          <span class="item">BEST SELLING</span>
+          <span class="arrow">
+            <svg
+              width="57"
+              height="50"
+              viewBox="0 0 57 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M56.6667 21.25V28.3333H14.1667V35.4167H7.08333V28.3333H0V21.25H7.08333V14.1667H14.1667V21.25H56.6667ZM21.25 7.08333H14.1667V14.1667H21.25V7.08333ZM21.25 7.08333H28.3333V0H21.25V7.08333ZM21.25 42.5H14.1667V35.4167H21.25V42.5ZM21.25 42.5H28.3333V49.5833H21.25V42.5Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+        </span>
+        <span class="content" aria-hidden="true">
+          <span class="item">NEW ARRIVAL</span>
+          <span class="arrow">
+            <svg
+              width="40"
+              height="20"
+              viewBox="0 0 40 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40 10H2M2 10L11 1M2 10L11 19"
+                stroke="currentColor"
+                stroke-width="2.5"
+              />
+            </svg>
+          </span>
+          <span class="item">BEST SELLING</span>
+          <span class="arrow">
+            <svg
+              width="57"
+              height="50"
+              viewBox="0 0 57 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M56.6667 21.25V28.3333H14.1667V35.4167H7.08333V28.3333H0V21.25H7.08333V14.1667H14.1667V21.25H56.6667ZM21.25 7.08333H14.1667V14.1667H21.25V7.08333ZM21.25 7.08333H28.3333V0H21.25V7.08333ZM21.25 42.5H14.1667V35.4167H21.25V42.5ZM21.25 42.5H28.3333V49.5833H21.25V42.5Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="item">
+          <h3 class="heading">WORLDWIDE SHIPPING</h3>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo, turpis elit ultricies justo, vitae
+            tincidunt quam justo id lacus. Proin vitae.
+          </p>
+        </div>
+        <div class="item">
+          <h3 class="heading">CUSTOMER SERVICE</h3>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo, turpis elit ultricies justo, vitae
+            tincidunt quam justo id lacus. Proin vitae.
+          </p>
+        </div>
+        <div class="item">
+          <h3 class="heading">SECURE PAYMENT</h3>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo, turpis elit ultricies justo, vitae
+            tincidunt quam justo id lacus. Proin vitae.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2 class="heading">FREQUENTLY ASKED QUESTIONS</h2>
+        <p class="intro">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+          nisl non rhoncus commodo.
+        </p>
+
+        <div class="tabs">
+          <button class="tab" data-tab="orders" type="button">ORDERS</button>
+          <button class="tab" data-tab="shipping" type="button">
+            SHIPPING
+          </button>
+          <button class="tab tab--active" data-tab="returns" type="button">
+            RETURNS & EXCHANGES
+          </button>
+          <button class="tab" data-tab="sizing" type="button">
+            SIZING & PRODUCTS
+          </button>
+        </div>
+
+        <div class="list" data-panel="orders" hidden>
+          <details class="item">
+            <summary class="question">
+              <span>HOW DO I TRACK MY ORDER?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Once your order has shipped, you will receive a confirmation
+                email with a tracking number. You can use this number on our
+                website or the carrier's site to track your package.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>CAN I MODIFY OR CANCEL MY ORDER?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Orders can be modified or cancelled within 1 hour of placement.
+                After that, the order enters processing and changes may not be
+                possible. Please contact customer service immediately.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>WHAT PAYMENT METHODS DO YOU ACCEPT?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                We accept all major credit cards (Visa, Mastercard, American
+                Express), PayPal, and bank transfers. All transactions are
+                securely processed.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="list" data-panel="shipping" hidden>
+          <details class="item">
+            <summary class="question">
+              <span>HOW LONG DOES SHIPPING TAKE?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Standard shipping takes 5–7 business days. Express shipping is
+                available at checkout and typically arrives within 2–3 business
+                days.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>DO YOU SHIP INTERNATIONALLY?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Yes, we ship to over 50 countries worldwide. International
+                shipping times vary by destination, typically 7–14 business
+                days. Duties and taxes may apply.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>IS FREE SHIPPING AVAILABLE?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Free standard shipping is available on all orders over $150.
+                This applies to domestic orders only. International orders have
+                separate shipping rates.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="list" data-panel="returns">
+          <details class="item" open>
+            <summary class="question">
+              <span>WHAT IS YOUR RETURN POLICY?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Items can be returned within 14 days of receipt, provided they
+                are unworn, unwashed, and in original condition with tags
+                attached.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>CAN I EXCHANGE FOR A DIFFERENT SIZE?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Yes, we offer free size exchanges on all full-price items.
+                Please contact our customer service team to arrange an exchange.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>ARE SALE ITEMS REFUNDABLE?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Sale items are final sale and cannot be returned or exchanged
+                unless they arrive damaged or defective.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="list" data-panel="sizing" hidden>
+          <details class="item">
+            <summary class="question">
+              <span>HOW DO I FIND MY SIZE?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Please refer to our size guide available on each product page.
+                Measurements are provided in both centimeters and inches to help
+                you find the perfect fit.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>WHAT MATERIALS ARE USED?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Material composition is listed on each product page. We
+                primarily use premium cotton, silk, and sustainable blends. Care
+                instructions are included with every garment.
+              </p>
+            </div>
+          </details>
+
+          <details class="item">
+            <summary class="question">
+              <span>DO YOUR ITEMS RUN TRUE TO SIZE?</span>
+              <span class="chevron"></span>
+            </summary>
+            <div class="answer">
+              <p>
+                Most of our items run true to size. However, some styles may
+                have a relaxed or slim fit. Check the product description for
+                specific fit notes and recommendations.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="inquiry">
+      <div class="container">
+        <div class="info">
+          <h2 class="heading">MAKE AN<br />INQUIRY</h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo.
+          </p>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <fieldset class="fieldset">
+            <legend class="sr-only">Gender</legend>
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" name="gender" value="female" checked />
+                <span class="radio-circle"></span>
+                <span class="radio-label">Female</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="gender" value="hybrid" />
+                <span class="radio-circle"></span>
+                <span class="radio-label">Hybrid</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="row">
+            <div class="field">
+              <input
+                type="text"
+                class="input"
+                placeholder="Full name*"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="email"
+                class="input"
+                placeholder="Plaimanas@gmail.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <input type="tel" class="input" placeholder="Phone number*" />
+            </div>
+            <div class="field field--select">
+              <select class="select" required>
+                <option value="" disabled selected>Select Subject*</option>
+                <option value="general">General Inquiry</option>
+                <option value="order">Order Support</option>
+                <option value="returns">Returns</option>
+              </select>
+              <svg
+                class="select-arrow"
+                width="12"
+                height="7"
+                viewBox="0 0 12 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L6 6L11 1"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label"
+              >I agree to all terms & conditions</span
+            >
+          </label>
+
+          <button type="submit" class="submit">SEND</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <a href="#" class="homepage">HOMEPAGE</a>
+
+        <div class="grid">
+          <div class="col">
+            <h4 class="col-title">ABOUT</h4>
+            <ul class="links">
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Editorial</a></li>
+              <li><a href="#">Stories</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h4 class="col-title">HELP</h4>
+            <ul class="links">
+              <li><a href="#">Payment Installment</a></li>
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h4 class="col-title">SOCIAL</h4>
+            <ul class="links">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h4 class="col-title">LEGAL</h4>
+            <ul class="links">
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col col--newsletter">
+            <h4 class="col-title">NEWSLETTER</h4>
+            <form class="newsletter" action="#" method="post">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Email"
+                required
+              />
+              <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <span class="copy">&copy;PLAIMANAS</span>
+          <span class="credit">Web by ::*</span>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/faq.js"></script>
+  </body>
+</html>

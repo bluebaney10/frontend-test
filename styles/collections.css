@@ -1,0 +1,54 @@
+.collections {
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: 0 var(--page-px) 80px;
+
+  .container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+  }
+
+  .card--wide {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 7;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #1a1a1a;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover .card-image {
+    transform: scale(1.03);
+  }
+
+  .card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(20px, 2.5vw, 36px);
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

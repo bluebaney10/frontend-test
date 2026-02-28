@@ -1,0 +1,114 @@
+.footer {
+  background: var(--color-gray-bg);
+  color: var(--color-black);
+  padding: 40px var(--page-px) 0;
+
+  .container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .homepage {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .col-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .links {
+    & li {
+      margin-bottom: 8px;
+    }
+
+    & a {
+      font-size: 12px;
+      color: var(--color-gray-text);
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--color-black);
+      }
+    }
+  }
+
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 12px;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid var(--color-gray-border);
+    background: transparent;
+    color: var(--color-black);
+    outline: none;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: #999;
+    }
+
+    &:focus {
+      border-bottom-color: var(--color-black);
+    }
+  }
+
+  .newsletter-btn {
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    background: #e0e0e0;
+    color: var(--color-black);
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    width: 100%;
+    transition:
+      background 0.2s,
+      color 0.2s;
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 12px;
+    color: var(--color-black);
+  }
+}

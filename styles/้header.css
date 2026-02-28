@@ -1,0 +1,153 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 20px var(--page-px);
+    color: var(--color-white);
+    font-family: var(--font-arial);
+
+    .left {
+      flex: 1;
+    }
+
+    .lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .lang-arrow {
+      width: 10px;
+      height: 6px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .link {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .dropdown {
+      position: static;
+    }
+
+    .dropdown-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--color-black);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 80px;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.3s,
+        visibility 0.3s;
+      z-index: 0;
+
+      .dropdown-content {
+        position: absolute;
+        left: 49%;
+        top: 22px;
+        width: 100%;
+        max-width: var(--page-max);
+      }
+
+      .dropdown-title {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .dropdown-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & a {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.04em;
+          transition: opacity 0.2s;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    &:has(.dropdown:hover) > .dropdown-panel,
+    & > .dropdown-panel:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    .signin {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .cart {
+      display: inline-flex;
+      align-items: center;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

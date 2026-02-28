@@ -1,0 +1,31 @@
+.features {
+  background: var(--color-gray-bg);
+  color: var(--color-black);
+  padding: 60px var(--page-px);
+
+  .container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .heading {
+    font-family: var(--font-arial);
+    font-weight: 700;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .desc {
+    font-family: var(--font-arial);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-gray-text);
+  }
+}
