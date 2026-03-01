@@ -1,5 +1,9 @@
+plaimanas-faq {
+  display: contents;
+}
+
 .faq {
-  background: var(--color-black);
+  background-color: var(--color-black);
   color: var(--color-white);
   padding: 80px var(--page-px);
 
@@ -11,7 +15,7 @@
   .heading {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -22,9 +26,9 @@
     font-family: var(--font-arial);
     font-weight: 400;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-white);
     margin-bottom: 40px;
   }
 
@@ -40,31 +44,30 @@
     font-family: var(--font-arial);
     font-weight: 400;
     font-size: 13px;
-    font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 8px 20px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    background: transparent;
     color: var(--color-white);
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
     transition:
       background 0.2s,
       color 0.2s;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
   }
 
   .tab--active {
-    background: var(--color-white);
+    background-color: var(--color-white);
     color: var(--color-black);
     border-color: var(--color-white);
 
     &:hover {
-      background: var(--color-white);
+      background-color: var(--color-white);
     }
   }
 
@@ -87,7 +90,7 @@
     list-style: none;
     font-family: var(--font-arial);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
 
     &::-webkit-details-marker {
       display: none;
@@ -125,9 +128,34 @@
   .answer {
     padding: 0 0 20px;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
     font-family: var(--font-arial);
     font-size: 14px;
     font-weight: 400;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 60px var(--page-px);
+
+    .heading {
+      font-size: 22px;
+    }
+
+    .tabs {
+      gap: 8px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tab {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+
+    .question {
+      font-size: 14px;
+    }
   }
 }

@@ -1,24 +1,12 @@
 .footer {
-  background: var(--color-gray-bg);
+  background-color: #f8f9f8;
   color: var(--color-black);
   padding: 40px var(--page-px) 0;
+  font-family: var(--font-arial);
 
   .container {
     max-width: var(--page-max);
     margin: 0 auto;
-  }
-
-  .homepage {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 32px;
-
-    &:hover {
-      opacity: 0.7;
-    }
   }
 
   .grid {
@@ -30,7 +18,7 @@
 
   .col-title {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 16px;
@@ -65,13 +53,13 @@
     padding: 8px 0;
     border: none;
     border-bottom: 1px solid var(--color-gray-border);
-    background: transparent;
+    background-color: transparent;
     color: var(--color-black);
     outline: none;
     transition: border-color 0.2s;
 
     &::placeholder {
-      color: #999;
+      color: var(--color-placeholder);
     }
 
     &:focus {
@@ -86,18 +74,19 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 10px 24px;
-    background: #e0e0e0;
+    background-color: #e0e0e0;
+    border: solid 1px #e0e0e0;
     color: var(--color-black);
-    border: none;
     cursor: pointer;
     align-self: flex-start;
     width: 100%;
     transition:
-      background 0.2s,
+      all 0.2s,
       color 0.2s;
 
     &:hover {
-      background: var(--color-white);
+      background-color: var(--color-white);
+      border: solid 1px var(--color-black);
       color: var(--color-black);
     }
   }
@@ -107,8 +96,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-top: 1px solid var(--color-gray-border);
     font-size: 12px;
     color: var(--color-black);
+  }
+
+  @media (max-width: 768px) {
+    padding: 32px var(--page-px) 0;
+
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .col--newsletter {
+      grid-column: 1 / -1;
+    }
   }
 }

@@ -3,7 +3,7 @@
   width: 100%;
   height: clamp(400px, 44vw, 700px);
   overflow: hidden;
-  background: var(--color-black);
+  background-color: var(--color-black);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -45,5 +45,12 @@
     width: 100%;
     padding: 0 var(--page-px);
     mix-blend-mode: difference;
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      top: 50px;
+      padding: 0;
+    }
   }
 }

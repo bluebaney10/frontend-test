@@ -1,18 +1,14 @@
 .marquee {
-  background: var(--color-white);
   color: var(--color-black);
   overflow: hidden;
-  background-color: #000000;
+  background-color: var(--color-black);
   height: 85px;
+  display: flex;
 
   .track {
     display: flex;
     width: max-content;
     animation: marquee-scroll 20s linear infinite;
-
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
-    }
   }
 
   &:hover {
@@ -31,11 +27,11 @@
   .item {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 0.02em;
     white-space: nowrap;
-    color: #ffffff;
+    color: var(--color-white);
   }
 
   .arrow {
@@ -45,6 +41,17 @@
     & svg {
       width: clamp(30px, 3vw, 40px);
       height: auto;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .marquee {
+    .item {
+      font-size: 28px;
+    }
+
+    .arrow svg {
+      width: 20px;
     }
   }
 }

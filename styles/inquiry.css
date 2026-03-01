@@ -1,5 +1,6 @@
 .inquiry {
-  background: var(--color-white);
+  position: relative;
+  background-color: var(--color-white);
   color: var(--color-black);
   padding: 80px var(--page-px);
   .container {
@@ -13,8 +14,8 @@
 
   .heading {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(32px, 4vw, 40px);
+    font-weight: 900;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 0.02em;
     line-height: 1.1;
@@ -25,7 +26,7 @@
     font-family: var(--font-arial);
     font-size: 14px;
     line-height: 1.7;
-    color: var(--color-gray-text);
+    color: var(--color-black);
     max-width: 360px;
   }
 
@@ -68,7 +69,7 @@
       left: 50%;
       width: 8px;
       height: 8px;
-      background: var(--color-black);
+      background-color: var(--color-black);
       border-radius: 50%;
       transform: translate(-50%, -50%) scale(0);
       transition: transform 0.2s ease;
@@ -98,13 +99,13 @@
     padding: 10px 0;
     border: none;
     border-bottom: 1px solid var(--color-gray-border);
-    background: transparent;
+    background-color: transparent;
     color: var(--color-black);
     outline: none;
     transition: border-color 0.2s;
 
     &::placeholder {
-      color: #999;
+      color: var(--color-placeholder);
     }
 
     &:focus {
@@ -123,7 +124,7 @@
     padding: 10px 24px 10px 0;
     border: none;
     border-bottom: 1px solid var(--color-gray-border);
-    background: transparent;
+    background-color: transparent;
     color: var(--color-black);
     outline: none;
     appearance: none;
@@ -182,7 +183,7 @@
   }
 
   .checkbox input:checked + .checkbox-box {
-    background: var(--color-black);
+    background-color: var(--color-black);
 
     &::after {
       transform: rotate(45deg) scale(1);
@@ -191,7 +192,7 @@
 
   .checkbox-label {
     font-size: 12px;
-    color: var(--color-gray-text);
+    color: rgba(0, 0, 0, 0.5);
   }
 
   .submit {
@@ -201,7 +202,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 14px 40px;
-    background: var(--color-black);
+    background-color: var(--color-black);
     color: var(--color-white);
     border: 1px solid var(--color-black);
     cursor: pointer;
@@ -210,8 +211,41 @@
       color 0.2s;
 
     &:hover {
-      background: var(--color-white);
+      background-color: var(--color-white);
       color: var(--color-black);
+    }
+  }
+
+  .box-back {
+    width: 90px;
+    height: 36px;
+    font-size: 12px;
+    font-family: var(--font-arial);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inquiry {
+    padding: 60px var(--page-px);
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .row {
+      grid-template-columns: 1fr;
     }
   }
 }

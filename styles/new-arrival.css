@@ -1,5 +1,5 @@
 .new-arrival {
-  background: var(--color-white);
+  background-color: var(--color-white);
   color: var(--color-black);
   padding: 100px var(--page-px);
 
@@ -14,26 +14,26 @@
 
   .image-wrap {
     position: relative;
-    width: 420px;
+    width: 566px;
     max-width: 100%;
     margin-bottom: 32px;
   }
 
   .image {
     width: 100%;
-    aspect-ratio: 3 / 4;
-    background: #1a1a1a;
+    aspect-ratio: 566 / 572;
+    background-color: var(--color-dark-bg);
     display: block;
   }
 
   .badge {
     position: absolute;
-    right: -24px;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(80px, 10vw, 150px);
+    font-size: 80px;
     color: var(--color-white);
     line-height: 1;
     letter-spacing: 0.02em;
@@ -57,5 +57,20 @@
     line-height: 1.7;
     color: #000000;
     max-width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-arrival {
+    padding: 60px var(--page-px);
+
+    .image-wrap {
+      width: 100%;
+      padding: 0 34px;
+    }
+
+    .badge {
+      font-size: 40px;
+    }
   }
 }

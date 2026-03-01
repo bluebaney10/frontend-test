@@ -1,9 +1,14 @@
+plaimanas-header {
+  display: contents;
+}
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+  background-color: var(--color-white);
 
   .nav {
     display: flex;
@@ -12,7 +17,7 @@
     max-width: var(--page-max);
     margin: 0 auto;
     padding: 20px var(--page-px);
-    color: var(--color-white);
+    color: var(--color-black);
     font-family: var(--font-arial);
 
     .left {
@@ -35,6 +40,38 @@
       }
     }
 
+    .lang-selector {
+      position: relative;
+    }
+
+    .lang-popup {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--color-white);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 12px 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.2s,
+        visibility 0.2s;
+
+      & a {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--color-black);
+        white-space: nowrap;
+      }
+    }
+
+    .lang-selector:hover .lang-popup {
+      opacity: 1;
+      visibility: visible;
+    }
+
     .lang-arrow {
       width: 10px;
       height: 6px;
@@ -44,46 +81,71 @@
       display: flex;
       align-items: center;
       gap: 32px;
+      z-index: 1;
+      position: relative;
+
+      & > li {
+        transition: opacity 0.3s;
+      }
+    }
+
+    &:has(.dropdown:hover) .overlay {
+      opacity: 1;
+    }
+
+    .links:has(.dropdown:hover) > li:not(.dropdown) {
+      opacity: 0;
     }
 
     .link {
+      display: inline-block;
+      position: relative;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      transition: opacity 0.2s;
+      transition: transform 0.3s;
 
       &:hover {
-        opacity: 0.7;
+        font-weight: 700;
+        transform: scale(1.5);
       }
     }
 
     .dropdown {
-      position: static;
+      position: relative;
+
+      &:hover {
+        .dropdown-panel {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .link {
+          transform: scale(1.5);
+          color: var(--color-white);
+        }
+      }
     }
 
     .dropdown-panel {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
-      background: var(--color-black);
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      padding-top: 80px;
+      padding-top: 40px;
       opacity: 0;
       visibility: hidden;
       transition:
         opacity 0.3s,
         visibility 0.3s;
-      z-index: 0;
+      z-index: 1;
 
       .dropdown-content {
-        position: absolute;
-        left: 49%;
-        top: 22px;
         width: 100%;
         max-width: var(--page-max);
       }
@@ -100,24 +162,33 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        color: var(--color-white);
 
         & a {
           font-size: 14px;
           font-weight: 400;
           letter-spacing: 0.04em;
-          transition: opacity 0.2s;
+          transition: all 0.2s;
+          display: inline-block;
 
           &:hover {
-            opacity: 0.7;
+            transform: scale(1.2);
           }
         }
       }
     }
 
-    &:has(.dropdown:hover) > .dropdown-panel,
-    & > .dropdown-panel:hover {
-      opacity: 1;
-      visibility: visible;
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: var(--color-black);
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
     }
 
     .right {
@@ -148,6 +219,157 @@
       &:hover {
         opacity: 0.7;
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+
+    &.is-active {
+      z-index: 101;
+
+      & span {
+        background-color: var(--color-black);
+      }
+
+      & span:nth-child(1) {
+        transform: translateY(3px) rotate(45deg);
+      }
+      & span:nth-child(2) {
+        transform: translateY(-3px) rotate(-45deg);
+      }
+    }
+
+    & span {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: var(--color-black);
+      transition:
+        transform 0.3s,
+        opacity 0.3s;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    & .nav {
+      .right {
+        gap: 10px;
+      }
+    }
+
+    .nav {
+      padding: 14px var(--page-px);
+
+      .links,
+      .dropdown-panel {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--color-white);
+      z-index: 99;
+      padding-top: 70px;
+      overflow-y: auto;
+
+      &.is-open {
+        display: block;
+      }
+    }
+
+    .mobile-menu__links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 40px var(--page-px);
+
+      & > li > a {
+        font-family: var(--font-arial);
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-black);
+      }
+    }
+
+    .mobile-menu__dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mobile-menu__dropdown-toggle {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-black);
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      &.is-active {
+        font-size: 24px;
+        font-weight: 700;
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      & svg {
+        transition: transform 0.3s;
+      }
+    }
+
+    .mobile-menu__sub {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+
+      & a {
+        font-family: var(--font-arial);
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--color-black);
+      }
+    }
+
+    .mobile-menu__sub.is-open {
+      display: flex;
     }
   }
 }
