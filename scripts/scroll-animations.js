@@ -1,5 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.from(".hero .title", {
+  opacity: 0,
+  y: 40,
+  duration: 3,
+  ease: "power2.out",
+});
+
 gsap.to(".new-arrival .badge", {
   y: () => (window.innerWidth <= 768 ? 180 : 290),
   ease: "none",
