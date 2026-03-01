@@ -80,9 +80,7 @@
     cursor: pointer;
     align-self: flex-start;
     width: 100%;
-    transition:
-      all 0.2s,
-      color 0.2s;
+    transition: all 0.3s;
 
     &:hover {
       background-color: var(--color-white);
